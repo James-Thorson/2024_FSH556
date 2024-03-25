@@ -1,0 +1,5 @@
+# use dir/file to exclude file in directory
+*.o
+*.dll
+*.so
+~$*
