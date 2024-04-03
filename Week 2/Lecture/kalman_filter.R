@@ -1,5 +1,5 @@
 
-setwd( "C:/Users/James.Thorson/Desktop/Project_git/2018_FSH556/Week 3 -- Temporal Models/Lecture" )
+setwd( R'(C:\Users\James.Thorson\Desktop\Git\2024_FSH556\Week 2\Lecture)' )
 Use_REML = TRUE
 set.seed(2)
 
