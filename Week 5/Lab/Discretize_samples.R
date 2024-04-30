@@ -7,6 +7,8 @@ library(sf)
 library(fmesher)
 samples = data.frame("x"=vismba$gx, "y"=vismba$gy, "agb"=vismba$agb )
 samples = st_as_sf( samples, coords=c("x","y") )
+#samples = samples[1:2,,drop=FALSE]
+samples$agb = 1
 
 grid = st_make_grid( st_bbox(c(xmin=0, xmax=1000, ymin=0, ymax=500)), n=c(8,4) )
 grid_i = st_intersects( samples, grid )
@@ -29,4 +31,6 @@ mesh = fm_mesh_2d( st_coordinates(st_centroid(grid_sf)),
 spde <- fm_fem( mesh, 
                 order = 2 )
 
-
+# M0 = spde$c0
+# M1 = spde$g1
+# M2 = spde$g2
